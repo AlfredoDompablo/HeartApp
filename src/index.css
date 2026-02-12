@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Utilities if needed */
+.heart-bg {
+  background: radial-gradient(circle, rgba(255, 77, 109, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+body {
+  background-color: #fff0f3;
+  overflow: hidden;
+  /* Prevent scroll */
+  overscroll-behavior: none;
+  /* Prevent elastic bounce on mobile */
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 2px solid #ff8fa3;
+  box-shadow: 0 10px 30px rgba(255, 77, 109, 0.2);
+}
