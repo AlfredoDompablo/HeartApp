@@ -2,14 +2,24 @@ import { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, useAnimation } from 'framer-motion';
 
-export default function FloatingButton({ onClick, children, className }) {
+export default function FloatingButton({ onClick, children, className, phrases = [] }) {
     const buttonRef = useRef(null);
     const controls = useAnimation();
     const [isMoved, setIsMoved] = useState(false);
     const [initialRect, setInitialRect] = useState(null);
+    const [btnText, setBtnText] = useState(children);
 
     // Mover el botón a una posición segura aleatoria
     const moveButton = () => {
+        // Cambiar texto si hay frases disponibles
+        if (phrases.length > 0) {
+            // Filtrar la frase actual para evitar repetición inmediata
+            const availablePhrases = phrases.filter(p => p !== btnText);
+            const pool = availablePhrases.length > 0 ? availablePhrases : phrases;
+            const randomPhrase = pool[Math.floor(Math.random() * pool.length)];
+            setBtnText(randomPhrase);
+        }
+
         // Si es la primera vez, capturamos coordenadas para el Portal
         if (!isMoved && buttonRef.current) {
             const rect = buttonRef.current.getBoundingClientRect();
@@ -105,7 +115,7 @@ export default function FloatingButton({ onClick, children, className }) {
             className={`${className} cursor-pointer z-[9999] whitespace-nowrap select-none touch-manipulation`}
             style={!isMoved ? { position: 'relative' } : { position: 'fixed', left: 0, top: 0 }}
         >
-            {children}
+            {btnText}
         </motion.button>
     );
 

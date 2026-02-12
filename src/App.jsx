@@ -58,9 +58,9 @@ function App() {
             transition={{ duration: 0.5 }}
           >
             <h1 className="font-pacifico text-4xl md:text-5xl text-primary mb-6 leading-tight">
-              ¡Sabía que dirías que sí! ❤️
+              ¡Me haces la persona más feliz del mundo!
             </h1>
-            <p className="text-2xl text-text font-bold mt-4">Te amo muchísimo</p>
+            <p className="text-2xl text-text font-bold mt-4">Te amo muchísimo ❤️</p>
           </motion.div>
         ) : (
           <div>
@@ -79,9 +79,19 @@ function App() {
                 ¡Sí, claro que sí!
               </button>
 
-              <div className="relative w-full md:w-auto min-w-[180px] h-[50px]">
-                <FloatingButton className="absolute inset-0 w-full h-full flex items-center justify-center px-8 py-3 text-lg rounded-full font-bold bg-[#f8f9fa] text-text border-2 border-secondary hover:bg-white shadow-sm">
-                  No, gracias
+              <div className="relative w-full md:w-auto min-w-[240px] h-[50px]">
+                <FloatingButton
+                  className="absolute inset-0 w-full h-full flex items-center justify-center px-4 py-3 text-[10px] md:text-[13px] leading-tight rounded-full font-bold bg-[#f8f9fa] text-text border-2 border-secondary hover:bg-white shadow-sm"
+                  phrases={[
+                    "Ya dime que sí",
+                    "Buen intento",
+                    "Estuvo cerca",
+                    "Rindete",
+                    "La respuesta es sí",
+                    "¿Me odias?"
+                  ]}
+                >
+                  Claro que no, ¿que ganaria con eso?
                 </FloatingButton>
               </div>
             </div>

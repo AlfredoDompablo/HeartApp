@@ -11,9 +11,9 @@
 
 body {
   background-color: #fff0f3;
-  overflow: hidden;
+  /* overflow: hidden; */
   /* Prevent scroll */
-  overscroll-behavior: none;
+  /* overscroll-behavior: none; */
   /* Prevent elastic bounce on mobile */
 }
 
