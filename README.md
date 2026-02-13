@@ -1,16 +1,86 @@
-# React + Vite
+# Juego de los Corazones ❤️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una aplicación web interactiva y romántica diseñada para hacer una propuesta especial de San Valentín. Construida con tecnologías modernas para asegurar animaciones fluidas y una experiencia de usuario encantadora.
 
-Currently, two official plugins are available:
+## ✨ Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+*   **Minijuego Interactivo**: Atrapa corazones para "demostrar tu amor" antes de la pregunta.
+*   **Botón "No" Escapadizo**: Un botón que huye del cursor con física divertida y frases dinámicas.
+*   **Celebración Espectacular**: Confeti de corazones, GIF temático y mensaje de éxito.
+*   **Contador de Relación**: Muestra el tiempo exacto que han estado juntos.
+*   **Diseño Responsivo**: Funciona perfectamente en móviles y escritorio.
 
-## React Compiler
+## 🛠️ Tecnologías
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*   **[React](https://react.dev/)** (via Vite): Para la estructura y lógica de componentes.
+*   **[Tailwind CSS](https://tailwindcss.com/)**: Para estilizado rápido y responsivo.
+*   **[Framer Motion](https://www.framer.com/motion/)**: Para animaciones suaves y gestos.
+*   **[Canvas Confetti](https://www.kirilv.com/canvas-confetti/)**: Para los efectos de celebración.
 
-## Expanding the ESLint configuration
+## 🚀 Instalación y Desarrollo Local
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1.  **Clonar el repositorio:**
+    ```bash
+    git clone https://github.com/AlfredoDompablo/HeartApp.git
+    cd HeartApp
+    ```
+
+2.  **Instalar dependencias:**
+    ```bash
+    npm install
+    ```
+
+3.  **Iniciar servidor de desarrollo:**
+    ```bash
+    npm run dev
+    ```
+    La aplicación estará disponible en `http://localhost:5173`.
+
+## 📦 Construcción para Producción
+
+Para generar los archivos estáticos optimizados:
+
+```bash
+npm run build
+```
+
+Los archivos se generarán en la carpeta `dist`.
+
+## ☁️ Guía de Despliegue en Vercel
+
+La forma más rápida de publicar esta aplicación es usando **Vercel**.
+
+### Requisitos previos
+*   Tener una cuenta en [Vercel](https://vercel.com).
+*   Tener Node.js instalado.
+
+### Pasos
+
+1.  **Instalar Vercel CLI (opcional pero recomendado):**
+    ```bash
+    npm install -g vercel
+    ```
+
+2.  **Iniciar sesión:**
+    ```bash
+    vercel login
+    ```
+
+3.  **Desplegar:**
+    Estando en la carpeta del proyecto, ejecuta:
+    ```bash
+    vercel
+    ```
+    
+    Responde a las preguntas de configuración (puedes aceptar los valores predeterminados con `Enter`).
+
+4.  **Despliegue a Producción (si hiciste cambios):**
+    ```bash
+    vercel --prod
+    ```
+
+¡Listo! Vercel te dará una URL (ej: `https://heart-app.vercel.app`) para compartir.
+
+## 📝 Créditos
+
+Desarrollado con ❤️ por **AlfredoDompablo**.
